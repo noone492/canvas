@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+    <html>
+        <body>
+            <canvas id='canvas' >your browser is not support canvas</canvas>
+            <script>
+                var canv = document.getElementById('canvas'),
+                ctx = canv.getContext('2d');
+
+                canv.width = window.innerWidth - 40;
+                canv.height = window.innerHeight - 45;
+                //main
+                var msd = false, color = 'black',width = 1;
+                ctx.fillStyle = 'white'
+                ctx.fillRect(0,0,canv.width,canv.height)
+                canv.addEventListener('mousedown', function(x) {
+                    msd = true
+                })
+                canv.addEventListener('mouseup', function(y) {
+                    msd = false
+                })
+                function setcolor_black (e) {
+                    color = 'black'
+                }
+                function setcolor_red (e) {
+                    color = 'red'
+                }
+                function setcolor_orange (e) {
+                    color = 'orange'
+                }
+                function setcolor_yellow (e) {
+                    color = 'yellow'
+                }
+                function setcolor_green (e) {
+                    color = 'green'
+                }
+                function setcolor_blue (e) {
+                    color = 'blue'
+                }
+                function setcolor_darkblue (e) {
+                    color = 'darkblue'
+                }
+                function setcolor_purple (e) {
+                    color = 'purple'
+                }
+                function setcolor_white (e) {
+                    color = 'white'
+                }
+                canv.addEventListener('mousemove',function(e){
+                    width = document.getElementById("inpt").value;
+                    if (msd) {
+                    ctx.lineWidth =  width * 2 ;
+                    ctx.strokeStyle = color
+                    ctx.lineTo(e.clientX, e.clientY)
+                    ctx.stroke()
+                    ctx.beginPath();
+                    ctx.fillStyle = color
+                    ctx.arc(e.clientX,e.clientY,width,0,Math.PI*2)
+                    ctx.fill()
+                            }
+                    ctx.beginPath();
+                    ctx.moveTo(e.clientX, e.clientY);
+                    
+                })
+                
+            </script>
+            <button onclick= setcolor_black() id='black' >c</button>
+            <button onclick= setcolor_red() id='red' >c</button>
+            <button onclick= setcolor_orange() id='orange' >c</button>
+            <button onclick= setcolor_yellow() id='yellow' >c</button>
+            <button onclick= setcolor_green() id='green' >c</button>
+            <button onclick= setcolor_blue() id='blue' >c</button>
+            <button onclick= setcolor_darkblue() id='darkblue' >c</button>
+            <button onclick= setcolor_purple() id='purple' >c</button><br>
+            <button onclick= setcolor_white() id='white' >c</button>
+            <input placeholder="width" id='inpt'type="number" value='1' >
+
+        </body>
+        <head>
+            <link href='canvas_test.css' type='text/css' rel='stylesheet'>
+            <script href="C:\Users\tyrip\Desktop\html and css\tests\js\jq.js"></script>
+        </head>
+    </html>

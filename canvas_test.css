@@ -1,0 +1,43 @@
+body{
+    margin: 0px;
+    background-color: black;
+}
+canvas{
+    display:block;
+}
+#red {
+    color: red;
+    background-color: red;
+}
+#black {
+    color:black;
+    background-color:black;
+}
+#orange{
+    color:orange;
+    background-color:orange;
+}
+#yellow{
+    color:yellow;
+    background-color:yellow;
+}
+#green{
+    color:green;
+    background-color:green;
+}
+#blue{
+    color:blue;
+    background-color:blue;
+}
+#darkblue{
+    color:darkblue;
+    background-color:darkblue;
+}
+#purple{
+    color:purple;
+    background-color:purple;
+}
+#white{
+    color:white;
+    background-color:white;
+}
